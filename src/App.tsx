@@ -56,7 +56,7 @@ const App = () => {
         <Routes>
           <Route path={ROUTE.HOME} element={<LayoutContainer />}>
             <Route index element={<HomePage />} />
-
+            {/* REDIRECT */}
             {authorized() ? (
               <>
                 <Route path={ROUTE.USER} element={<UserPage />}>
@@ -75,7 +75,6 @@ const App = () => {
             ) : null}
 
             <Route path="*" element={<NotFoundPage />} />
-            <Route path={ROUTE.PAGE_NOT_FOUND} element={<NotFoundPage />} />
           </Route>
         </Routes>
       </StateSuspense>
